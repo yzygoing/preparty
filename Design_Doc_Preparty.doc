@@ -1,0 +1,50 @@
+Design Document for Preparty
+
+
+Views:
+
+Screen 1: activity_main.xml
+- Logo Preparty
+- Search field
+- My Festivals listview
+
+Screen 2: activity_festivalinfo.xml
+- Title festival (maybe link to official website)
+- Info festival (from festival_list.xml)
+- Button 'Check Weather Conditions' to activity_weather.xml
+- Button 'Back' to Main Activity
+- Button 'Add to My Festivals' remember festival in my_festivals_list
+
+Screen 3: activity_weather.xml
+- Title festival
+- Open Weather Map (date + location from festival)
+- Button 'Back'
+
+Activities
+
+Main_Activity.java
+- set logo
+- set search field + search fuction
+- My Festivals list
+
+Festivalinfo_Activity.java
+- Grab title + info from festival_list.xml
+- Button 'Add to My Festivals' -> add festival in my_festival_list
+- Button 'Back' to Main_Activity.java
+
+Weather_Activity.java
+- set title festival
+- API key from Open Weather Map
+- Add location + date (from festival_list.xml) to Open Weather Map request
+- Button 'Back' to 'Festivalinfo_Activity.java' 
+
+Models
+
+- Festival_info
+- My_festival_list (sql table?)
+- Autocomplete
+
+Resources
+
+- Logo Preparty (res/drawable-mdpi/logo_preparty.png)
+- List of festivals (res/values/festival_list.xml) (from different websites? self?)
