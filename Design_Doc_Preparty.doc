@@ -11,7 +11,7 @@ Screen 1: activity_main.xml
 Screen 2: activity_festivalinfo.xml
 - Title festival (maybe link to official website)
 - Info festival (from festival_list.xml)
-- Button 'Check Weather Conditions' to activity_weather.xml
+- Button 'Weather Conditions' to activity_weather.xml
 - Button 'Back' to Main Activity
 - Button 'Add to My Festivals' remember festival in my_festivals_list
 
@@ -41,10 +41,10 @@ Weather_Activity.java
 Models
 
 - Festival_info
-- My_festival_list (sql table?)
+- My_festival_list
 - Autocomplete
 
 Resources
 
 - Logo Preparty (res/drawable-mdpi/logo_preparty.png)
-- List of festivals (res/values/festival_list.xml) (from different websites? self?)
+- List of festivals (res/values/festival_list.xml)
