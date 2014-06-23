@@ -67,7 +67,7 @@ public class WeatherActivity extends FestivalinfoActivity
 		WorldWeatherOnlineApiProvider.getClient().query(new ContextAwareAPIDelegate<WorldWeatherOnlineResponse>(WeatherActivity.this,
 		          WorldWeatherOnlineResponse.class, LoadPolicy.NEVER, RequestCache.StoragePolicy.DISABLED) 
 		          {
-					// TODO: fix error on getCurrentConditionList after getData();
+					// TODO: fix error on getCurrentConditionList
 				     @Override
 				     public void onResults(WorldWeatherOnlineResponse worldWeatherOnlineResponse) 
 				     {

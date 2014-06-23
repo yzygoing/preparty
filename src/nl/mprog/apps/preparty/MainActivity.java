@@ -54,7 +54,7 @@ public class MainActivity extends Activity implements TextWatcher
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		// open festival database in assets/festivaldatabase
+		// open festival database
 		mDbHelper = new TestAdapter(getApplicationContext());         
 		mDbHelper.createDatabase();      
 		mDbHelper.open();
@@ -110,7 +110,7 @@ public class MainActivity extends Activity implements TextWatcher
 		// link button to new activity
 		festivalinfo.setOnClickListener(new View.OnClickListener() 
 		{ 
-			// start new intent
+			// start new intent  
         	Intent festivalinfoActivity;
         	
             public void onClick(View V) 
