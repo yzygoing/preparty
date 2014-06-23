@@ -40,9 +40,24 @@ Weather_Activity.java
 
 Models
 
-- Festival_info
-- My_festival_list
-- Autocomplete
+Festival_info.class
+
+- Festival_id (int)
+- Festival_title (String)
+- Date (String)
+- Time (String)
+- Location.venue (String)
+- Location.city (String)
+- Location.street (String)
+- Url (String)
+
+
+My_festivals.class
+SQLite db my_festivals
+- UNIQUE ID (PRIMARY KEY INT)
+TABLE
+
+Search.class
 
 Resources
 

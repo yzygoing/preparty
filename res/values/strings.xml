@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Preparty</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_festival"></string>
+    <string name="header_festival">Search Festival</string>
+    <string name="logo"></string>
+    <string name="back">Back</string>
+    <string name="festivalinfo">Check Festival</string>
+    <string name="checkweather">Check Weather Forecast</string>
+    <string name="addfestival">Add festival</string>
+    <string name="myfestivals"></string>
+    
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="url">url</string>
+    <string name="genre">Genre</string>
+    <string name="location">Location</string>
+ 
+    
+</resources>

@@ -1,0 +1,146 @@
+<?xml version= "1.0"?>
+<festivals>
+	<festival id="1">
+		<title>Awakenings Festival Day 1</title>
+		<date>28-06-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<city>Halfweg</city>
+			<street>Haarlemmerstraatweg 7</street>
+		</location>
+		<url>http://www.awakeningsfestival.nl</url>
+		<genre>techno</genre>
+	</festival>
+	<festival id="2">
+		<title>Awakenings Festival Day 2</title>
+		<date>29-06-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<city>Halfweg</city>
+			<street>Haarlemmerstraatweg 7</street>
+		</location>
+		<url>http://www.awakeningsfestival.nl</url>
+		<genre>techno</genre>
+	</festival>
+	<festival id="3">
+		<title>Focus Festival</title>
+		<date>02-07-2014</date>
+		<time>16:00 - 03:00</time>
+		<location>
+			<venue>Rijk van de Keizer</venue>
+			<city>Amsterdam</city>
+			<street>Joris van den Berghweg 101</street>
+		</location>
+		<url>http://www.focusfestival.nl</url>
+		<genre>techhouse</genre>
+	</festival>
+	<festival id="4">
+		<title>Free Festival Original</title>
+		<date>06-07-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<city>Almere</city>
+			<street>Atlantisstrand</street>
+		</location>
+		<url>http://freefestival.nl</url>
+		<genre>house</genre>
+	</festival>
+	<festival id="5">
+		<title>Lost In A Moment Festival</title>
+		<date>20-07-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<venue>Sportpark Riekerhaven</venue>
+			<city>Amsterdam</city>
+			<street>Overschiestraat 190</street>
+		</location>
+		<url>https://www.facebook.com/events/276441895852891/</url>
+		<genre>techno</genre>
+	</festival>
+	<festival id="6">
+		<title>Georgies Wunder Garten</title>
+		<date>05-07-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<venue>Ruigoord</venue>
+			<city>Amsterdam</city>
+			<street>Ruigoord 76</street>
+		</location>
+		<url>http//wwww.georgies-garage.com</url>
+		<genre>deephouse</genre>
+	</festival>
+	<festival id="7">
+		<title>Slink Nachtfestival</title>
+		<date>12-07-2014</date>
+		<time>21:00 - 07:00</time>
+		<location>
+			<city>Amsterdam</city>
+		</location>
+		<url>https://www.facebook.com/events/677803242275446/?ref_dashboard_filter=upcoming</url>
+		<genre>techhouse</genre>
+	</festival>
+	<festival id="8">
+		<title>Vunzige Deuntjes Festival 2014</title>
+		<date>27-06-2014</date>
+		<time>11:00 - 23:00</time>
+		<location>
+			<city>Diemen</city>
+			<street>Diemerbos</street>
+		</location>
+		<url>https://www.facebook.com/events/598928203499020/?ref_dashboard_filter=upcoming</url>
+		<genre>deephouse</genre>
+	</festival>
+	<festival id="9">
+		<title>Wave Festival</title>
+		<date>16-08-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<street>Twiske</street>
+		</location>
+		<url>http://www.yellowtipi.nl/festival/wave-festival/</url>
+		<genre>deephouse</genre>
+	</festival>
+	<festival id="10">
+		<title>Knus Festival</title>
+		<date>23-08-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<street>Hemkade 48</street>
+		</location>
+		<url>https://www.facebook.com/events/226872664187906/?ref_dashboard_filter=upcoming</url>
+		<genre>deephouse</genre>
+	</festival>
+	<festival id="11">
+		<title>Voltt Festival</title>
+		<date>30-08-2014</date>
+		<time>11:00 - 23:00</time>
+		<location>
+			<venue>NDSM</venue>
+			<street>Neveritaweg 61</street>
+			<city>Amsterdam</city>
+		</location>
+		<url>http://www.voltt.com/</url>
+		<genre>techno</genre>
+	</festival>
+	<festival id="12">
+		<title>Pleinvrees Heroes</title>
+		<date>06-09-2014</date>
+		<time>12:00 - 23:00</time>
+		<location>
+			<city>Amsterdam</city>
+		</location>
+		<url>https://www.facebook.com/events/644040645649323/?ref_dashboard_filter=upcoming</url>
+		<genre>deephouse</genre>
+	</festival>
+	<festival id="13">
+		<title></title>
+		<date></date>
+		<time></time>
+		<location>
+			<city></city>
+			<street></street>
+		</location>
+		<url></url>
+		<genre></genre>
+	</festival>
+</festivals>
