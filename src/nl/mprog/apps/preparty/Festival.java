@@ -6,6 +6,8 @@ public class Festival implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	
+	int id;
+	
 	String name;
 	String date;
 	String time;

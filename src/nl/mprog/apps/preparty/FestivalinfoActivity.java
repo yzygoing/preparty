@@ -1,10 +1,13 @@
 package nl.mprog.apps.preparty;
 
+import java.util.ArrayList;
+
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.net.Uri;
@@ -28,6 +31,8 @@ public class FestivalinfoActivity extends MainActivity
 	// festival that activity is showing
 	Festival festival;
 	
+	// list for festivals
+	FestivalList festivalList;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -105,6 +110,21 @@ public class FestivalinfoActivity extends MainActivity
 			}
 		});
 		
+		// link button to festival and add festival to SharedPreferences
+		addfestival.setOnClickListener(new View.OnClickListener() 
+		{
+			//Intent addFestival = new Intent(getApplicationContext(), MainActivity.class);
+			
+			@Override
+			public void onClick(View v) 
+			{
+				// add festival in shared preferences
+				FestivalList.addFestival(festival);
+				Toast.makeText(getApplicationContext(), festival.name + " added to your list", Toast.LENGTH_LONG).show();
+			
+
+			}
+		});
 	
 	}
 	

@@ -14,6 +14,7 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.content.SharedPreferences;
 
 
  
@@ -21,9 +22,11 @@ public class MainActivity extends Activity implements TextWatcher
 { 
 	AutoCompleteTextView search_festival;
 	TextView header_festival;
+	TextView myfestivals;
 	ImageView preparty_logo;
 	public Button festivalinfo;
 	
+	public FestivalList festivalList;
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// override AutoCompleteTextView
@@ -32,7 +35,7 @@ public class MainActivity extends Activity implements TextWatcher
 	// database handler
 	TestAdapter mDbHelper; 
 	
-    // adapter for auto-complete
+    // adapter for auto-complete 
     ArrayAdapter<String> myAdapter;
     
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,23 +53,28 @@ public class MainActivity extends Activity implements TextWatcher
 	protected void onCreate(Bundle savedInstanceState)  
 	{
 		Log.d("PREPARTY", getApplicationContext().getDatabasePath("festivals").getAbsolutePath());
-		
+		 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
 		// open festival database
 		mDbHelper = new TestAdapter(getApplicationContext());         
 		mDbHelper.createDatabase();      
-		mDbHelper.open();
-		
-		// test
+		mDbHelper.open(); 
+		 
+		// test 
 		String[] testdata = mDbHelper.getTestData();
 		Log.d("PREPARTY", "getTestData >>"+ testdata.toString());
-		
+				
 		// add in auto complete drop down list
 
 		mDbHelper.close();
 		
+		// INIT LIST
+		festivalList = new FestivalList(getApplicationContext(), mDbHelper);
+		
+		Log.d("PREPARTY", "This ist he first item in you list: :: " + festivalList.festivals.get(0).name);
+		 
 		/////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		// test for CustomAutoCompleteView (overrule AutoCompleteTextView)
@@ -100,6 +108,21 @@ public class MainActivity extends Activity implements TextWatcher
 		 
 		// set TextView
 		header_festival =(TextView)findViewById(R.id.header_festival);
+		
+		// set TextView My Festivals
+		myfestivals = (TextView)findViewById(R.id.myfestivals);
+
+		// make a large string that contains the names of all the festivals in our list
+		String festivalslist = "";
+		
+		// loop throug the festival list to fill the string
+		for (Festival f : festivalList.festivals) 
+		{
+			// newline between festival names
+			festivalslist = festivalslist + f.name + " \n";
+		}
+		
+		myfestivals.setText(festivalslist);
 		
 		// set logo ImageView
 		preparty_logo = (ImageView) findViewById(R.id.imageView1); 

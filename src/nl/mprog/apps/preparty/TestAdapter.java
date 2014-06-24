@@ -84,17 +84,37 @@ public class TestAdapter
     {
     	Festival f = new Festival();
     	// TODO: check if name from input autocomplete is in database
-    	String sql = "SELECT title, date, time, location, genre FROM festivaltable WHERE title = '" + name + "'";
+    	String sql = "SELECT fid, title, date, time, location, genre FROM festivaltable WHERE title = '" + name + "'";
     	open();
         Cursor mCur = mDb.rawQuery(sql, null);
         mCur.moveToFirst();
         // load elements from db festivals
+        f.id = mCur.getInt(mCur.getColumnIndex("fid"));
         f.name = mCur.getString(mCur.getColumnIndex("title"));
         f.date = mCur.getString(mCur.getColumnIndex("date"));
         f.time = mCur.getString(mCur.getColumnIndex("time"));
         f.location = mCur.getString(mCur.getColumnIndex("location"));
         f.genre = mCur.getString(mCur.getColumnIndex("genre"));
         return f;
+    }
+    
+    // create festival object from data from the database
+    public Festival getFestival(int id) 
+    {
+    	Festival f = new Festival();
+    	// TODO: check if name from input autocomplete is in database
+    	String sql = "SELECT title, date, time, location, genre FROM festivaltable WHERE fid = '" + id + "'";
+    	open();
+    	Cursor mCur = mDb.rawQuery(sql, null);
+    	mCur.moveToFirst();
+    	// load elements from db festivals
+        f.id = id;
+    	f.name = mCur.getString(mCur.getColumnIndex("title"));
+    	f.date = mCur.getString(mCur.getColumnIndex("date"));
+    	f.time = mCur.getString(mCur.getColumnIndex("time"));
+    	f.location = mCur.getString(mCur.getColumnIndex("location"));
+    	f.genre = mCur.getString(mCur.getColumnIndex("genre"));
+    	return f;
     }
 
      public String[] getTestData()
@@ -118,7 +138,7 @@ public class TestAdapter
             	    
             	    while (mCur.moveToNext());
             	    // check festivalname
-            	    Log.d("TEST", festivalData[2].toString());
+            	    Log.d("TEST", festivalData[1].toString());
             }
              mCur.close();
              close();
