@@ -1,15 +1,11 @@
 package nl.mprog.apps.preparty;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.Toast;
+
 
 public class FestivalList
 {

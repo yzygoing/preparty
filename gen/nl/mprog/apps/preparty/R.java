@@ -21,24 +21,35 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int preparty_logo=0x7f020001;
+        public static final int bg_flower=0x7f020000;
+        public static final int cloudy=0x7f020001;
+        public static final int cold=0x7f020002;
+        public static final int hot=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int loading=0x7f020005;
+        public static final int loading_small=0x7f020006;
+        public static final int preparty_logo=0x7f020007;
+        public static final int rainy=0x7f020008;
+        public static final int stormy=0x7f020009;
+        public static final int sunny=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000d;
+        public static final int action_settings1=0x7f09000f;
+        public static final int background=0x7f090000;
         public static final int button1=0x7f090001;
         public static final int button2=0x7f090002;
-        public static final int button3=0x7f090003;
+        public static final int button3=0x7f090008;
         public static final int header_festival=0x7f09000a;
         public static final int imageView1=0x7f09000b;
+        public static final int location=0x7f09000d;
         public static final int myAutoComplete=0x7f090009;
         public static final int myfestivals=0x7f09000c;
-        public static final int textView1=0x7f090000;
-        public static final int textView2=0x7f090007;
-        public static final int textView3=0x7f090006;
-        public static final int textView4=0x7f090008;
-        public static final int textView5=0x7f090005;
-        public static final int textView7=0x7f090004;
+        public static final int tempLyt=0x7f09000e;
+        public static final int textView1=0x7f090004;
+        public static final int textView2=0x7f090003;
+        public static final int textView3=0x7f090005;
+        public static final int textView4=0x7f090007;
+        public static final int textView5=0x7f090006;
     }
     public static final class layout {
         public static final int activity_festivalinfo=0x7f030000;
@@ -50,21 +61,28 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
-        public static final int addfestival=0x7f060008;
         public static final int app_name=0x7f060000;
         public static final int back=0x7f060005;
         public static final int checkweather=0x7f060007;
-        public static final int date=0x7f06000b;
+        public static final int date=0x7f06000c;
+        public static final int empty=0x7f060015;
         public static final int festivalinfo=0x7f060006;
-        public static final int genre=0x7f06000e;
+        public static final int genre=0x7f06000f;
         public static final int header_festival=0x7f060003;
-        public static final int location=0x7f06000f;
+        public static final int loc_title=0x7f060011;
+        public static final int location=0x7f060010;
         public static final int logo=0x7f060004;
         public static final int myfestivals=0x7f060009;
+        public static final int pref_location_title=0x7f060012;
+        public static final int pref_unit_title=0x7f060013;
+        public static final int rememberfestival=0x7f060008;
         public static final int search_festival=0x7f060002;
-        public static final int time=0x7f06000c;
+        public static final int temp=0x7f060016;
+        public static final int time=0x7f06000d;
         public static final int title=0x7f06000a;
-        public static final int url=0x7f06000d;
+        public static final int title2=0x7f06000b;
+        public static final int url=0x7f06000e;
+        public static final int weatherforecast=0x7f060014;
     }
     public static final class style {
         /** 

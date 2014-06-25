@@ -9,15 +9,22 @@
     <string name="back">Back</string>
     <string name="festivalinfo">Check Festival</string>
     <string name="checkweather">Check Weather Forecast</string>
-    <string name="addfestival">Add festival</string>
+    <string name="rememberfestival">Remember festival</string>
     <string name="myfestivals"></string>
     
     <string name="title">Title</string>
+    <string name="title2"></string>
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="url">url</string>
     <string name="genre">Genre</string>
     <string name="location">Location</string>
- 
+    <string name="loc_title"></string>
+    <string name="pref_location_title"></string>
+    <string name= "pref_unit_title"></string>
+    
+    <string name="weatherforecast"> The Weather Forecast for:</string>
+    <string name="empty"></string>
+    <string name="temp">Temperature: </string>
     
 </resources>

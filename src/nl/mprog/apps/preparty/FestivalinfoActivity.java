@@ -1,16 +1,13 @@
 package nl.mprog.apps.preparty;
 
-import java.util.ArrayList;
-
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.net.Uri;
+
 
 public class FestivalinfoActivity extends MainActivity
 {
@@ -26,7 +23,7 @@ public class FestivalinfoActivity extends MainActivity
 	TextView time;
 	TextView location;
 	TextView watchtrailer;
-	TextView url;
+	RelativeLayout festivalinfo_layout;
 	
 	// festival that activity is showing
 	Festival festival;
@@ -46,7 +43,6 @@ public class FestivalinfoActivity extends MainActivity
 		genre = (TextView) findViewById(R.id.textView5);
 		time = (TextView) findViewById(R.id.textView3);
 		location = (TextView) findViewById(R.id.textView4);
-		url = (TextView) findViewById(R.id.textView7);
 		
 		// set buttons
 		backToMain = (Button) findViewById(R.id.button1);
@@ -61,10 +57,13 @@ public class FestivalinfoActivity extends MainActivity
 		
 		// fill all the TextViews with info from the festival
 		title.setText(festival.name);
-		date.setText(festival.date);
-		genre.setText(festival.genre);
-		time.setText(festival.time);
-		location.setText(festival.location);
+		date.setText("Date: "+festival.date);
+		genre.setText("Genre: "+festival.genre);
+		time.setText("Time: "+festival.time);
+		location.setText("City: "+festival.location);
+		
+		festivalinfo_layout = (RelativeLayout) findViewById(R.id.background);
+		festivalinfo_layout.setBackgroundResource(R.drawable.bg_flower);
 		
 	}
 	
@@ -78,7 +77,9 @@ public class FestivalinfoActivity extends MainActivity
         	Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
         	
             public void onClick(View V) 
-            {
+            {            	
+
+            	
                 // Starting Main Activity
                 startActivity(mainActivity);
             }
@@ -92,21 +93,10 @@ public class FestivalinfoActivity extends MainActivity
 			@Override
 			public void onClick(View v) 
 			{
+				// give the festival to weather activity to display the local eather
+				weatherActivity.putExtra("festivalObject", festival); 
+
 				startActivity(weatherActivity);
-			}
-		});
-		
-		// test: make button url clickable and link to website
-		url.setOnClickListener(new OnClickListener() 
-		{
-			Intent internetIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.awakeningsfestival.nl"));		
-			
-			@Override
-			public void onClick(View v) 
-			{
-				internetIntent.setComponent(new ComponentName("com.android.browser","com.android.browser.BrowserActivity"));
-				internetIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(internetIntent);
 			}
 		});
 		
@@ -120,9 +110,7 @@ public class FestivalinfoActivity extends MainActivity
 			{
 				// add festival in shared preferences
 				FestivalList.addFestival(festival);
-				Toast.makeText(getApplicationContext(), festival.name + " added to your list", Toast.LENGTH_LONG).show();
-			
-
+				Toast.makeText(getApplicationContext(), festival.name + " remembered", Toast.LENGTH_LONG).show();
 			}
 		});
 	
