@@ -19,7 +19,7 @@ import android.text.TextWatcher;
 public class MainActivity extends Activity implements TextWatcher 
 { 
 	AutoCompleteTextView search_festival;
-	TextView header_festival;
+	TextView header_festival; 
 	TextView myfestivals;
 	ImageView preparty_logo;
 	public Button festivalinfo; 
@@ -28,11 +28,11 @@ public class MainActivity extends Activity implements TextWatcher
 	
 
 	// database handler 
-	TestAdapter mDbHelper; 
+	TestAdapter mDbHelper;   
 	
     // adapter for auto-complete 
     ArrayAdapter<String> myAdapter;
-       
+        
 	@Override
 	protected void onCreate(Bundle savedInstanceState)  
 	{
@@ -46,12 +46,12 @@ public class MainActivity extends Activity implements TextWatcher
 		mDbHelper.createDatabase();      
 		mDbHelper.open(); 
 		 
-		// test 
+		// test   
 		String[] testdata = mDbHelper.getTestData();
 		Log.d("PREPARTY", "getTestData >>"+ testdata.toString());
 				
 
-		mDbHelper.close();
+		mDbHelper.close();   
 		
 		// INIT LIST
 		festivalList = new FestivalList(getApplicationContext(), mDbHelper);
@@ -115,9 +115,9 @@ public class MainActivity extends Activity implements TextWatcher
                 	            	
                     // starting the new festival activity
                     startActivity(festivalinfoActivity);
-                }  
-            }
-          
+                }    
+            } 
+           
 		});
 		
 		// initialize Auto Complete view

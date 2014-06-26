@@ -178,6 +178,10 @@ public class WeatherActivity extends FestivalinfoActivity
 		        {
 		        	weather.setImageResource(R.drawable.sunny);
 		        }
+		        else if (temp == 0.0)
+		        {
+		        	weather.setImageResource(R.drawable.apologize);
+		        }
 		        
 				// convert double to string for temperature in view
 				temperature = String.valueOf(temp);
